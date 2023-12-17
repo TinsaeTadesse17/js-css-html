@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="scripts.js"></script>
     <title>Tinsae Tadesse</title>
 </head>
 <body>
 
     
 
-    <nav>
-        <img src="images/logo.png" alt="Logo">
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <nav class="nav-menu">
+        <img src="images/logo.png" class = "logo" alt="Logo">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -21,6 +29,7 @@
     </nav>
 
 
+    <div class="card-container">
         <div class="card">
             <h2>Web Development</h2>
             <p>As a web developer, I excel in crafting dynamic and visually appealing websites using HTML, CSS, and JavaScript. My proficiency in these technologies allows me to create seamless user interfaces and engaging user experiences. I stay updated with the latest trends to ensure my websites are not only functional but also modern and user-friendly.</p>
@@ -35,7 +44,8 @@
             <h2>Networking</h2>
             <p>With a deep knowledge of networking concepts, I am well-versed in designing and implementing robust network architectures. I understand the intricacies of protocols, security measures, and infrastructure. My expertise in networking allows me to contribute to the development of secure and scalable systems, ensuring seamless communication and data transfer in a variety of environments.</p>
         </div>
-    
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <p>Connnect with me!</p>
         <div>
@@ -44,6 +54,13 @@
             <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>

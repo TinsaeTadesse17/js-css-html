@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="scripts.js"></script>
     <title>Tinsae Tadesse</title>
 </head>
 <body>
 
-    <nav>
-        <img src="images/logo.png" alt="Logo">
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <nav class="nav-menu">
+        <img src="images/logo.png" class = "logo" alt="Logo">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -17,10 +25,12 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <section>
+   
+    
+    <section class="about">
         <h1>About Me</h1>
-        <pre>I am a skilled software developer, passionate about transforming innovative ideas into powerful digital solutions. 
+        <img src="images/image2.jpg" alt="Tinsae Tadesse">  
+        <p>I am a skilled software developer, passionate about transforming innovative ideas into powerful digital solutions. 
 
             As a techie, I thrive on exploring fascinating concepts and pushing the boundaries of what's possible in the digital realm.
             
@@ -29,11 +39,12 @@
             In addition to my technical pursuits, I find inspiration in the realms of psychology, astronomy, and finance. I am an avid reader who enjoys delving into books that broaden my understanding of the world. When not immersed in code, you might find me engrossed in documentaries, challenging opponents in a game of chess, or exploring the outdoors through activities like hiking.
             
             Life is a canvas, and I am dedicated to continuing to breathe life into ideas through the fusion of technology and creativity.
-        </pre>
+        </p>
 
-        <img src="images/image2.jpg" alt="Tinsae Tadesse">  
+        
+        
     </section>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <p>Connect with me!</p>
         <div>
@@ -42,6 +53,13 @@
             <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>

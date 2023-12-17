@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="scripts.js"></script>
     <title>Tinsae Tadesse</title>
 </head>
 <body>
 
-    <nav>
-        <img src="images/logo.png" alt="Logo">
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <nav class="nav-menu">
+        <img src="images/logo.png" class = "logo" alt="Logo">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -18,43 +26,50 @@
         </ul>
     </nav>
 
-    <div class="card">
-        <video class="media" controls>
-            <source src="video/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="description">
-            <p>Project 1</p>
-            <a href="#" class="learn-more">Learn More</a>
+    <div class="card-container">
+        <div class="card">
+            <video class="media" controls>
+                <source src="video/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description">
+                <p>Project 1</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="media" src="images/image3.png" alt="Image 3">
+            <div class="description">
+                <p>Project 2</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="media" src="images/image3.png" alt="Image 3">
+            <div class="description">
+                <p>Project 3</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
         </div>
     </div>
-
-    <div class="card">
-        <img class="media" src="images/image3.png" alt="Image 3">
-        
-        <div class="description">
-            <p>Project 2</p>
-            <a href="#" class="learn-more">Learn More</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="media" src="images/image3.png" alt="Image 3">
-        
-        <div class="description">
-            <p>Project 3</p>
-            <a href="#" class="learn-more">Learn More</a>
-        </div>
-    </div>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
-        <p>Connnect with me!</p>
+        <p>Connect with me!</p>
         <div>
             <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
             <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
